@@ -1,6 +1,6 @@
 import {BrowserRouter, Navigate, Routes, Route} from 'react-router-dom'
-import homePage from './screens/homePage/homePage'
-import loginPage from './screens/loginPage/loginpage'
+import HomePage from './screens/homePage/homePage'
+import LoginPage from './screens/loginPage/loginpage'
 import ProfilePage from './screens/profilePage/profilePage'
 
 import { useMemo } from 'react'
@@ -21,8 +21,8 @@ const theme = useMemo(() => createTheme(themeSettings(mode)), [mode])
       <ThemeProvider theme={theme}>
       <CssBaseline/>
         <Routes>
-          <Route path='/' element={<loginPage/>} /> 
-          <Route path='/home' element={<homePage/>}/>
+          <Route path='/' element={<LoginPage/>} /> 
+          <Route path='/home' element={<HomePage/>}/>
           <Route path='/profile/:userId' element={<ProfilePage/>}/>
         </Routes>
         </ThemeProvider>
